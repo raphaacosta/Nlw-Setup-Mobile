@@ -23,7 +23,7 @@ export default function New() {
 
   const handleCreateNewHabit = async () => {
     try {
-      if (!title.trim() || weekDays.length === 0) { Alert.alert('Novo hábito', 'informe o nome do hábito e escolha a periodicidade.') }
+      if (!title.trim() || weekDays.length === 0) { return Alert.alert('Novo hábito', 'informe o nome do hábito e escolha a periodicidade.') }
 
       await api.post('habits', {
         title,
